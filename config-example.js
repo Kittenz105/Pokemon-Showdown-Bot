@@ -4,7 +4,7 @@
 // If you really don't know how to do this... Run `node getserver.js URL`.
 // Fill in the URL of the client where `URL` is.
 // For example: `node getserver.js http://example-server.psim.us/`
-exports.server = 'sim.psim.us';
+exports.server = 'http://frost.psim.us/thebreakfastleague';
 exports.port = 8000;
 
 // This is the server id.
@@ -17,12 +17,12 @@ exports.serverid = 'showdown';
 
 // The nick and password to log in with
 // If no password is required, leave pass empty
-exports.nick = 'Example bot nick';
-exports.pass = '';
+exports.nick = 'TBL Bot';
+exports.pass = 'fatmanz123';
 
 // The rooms that should be joined.
 // Joining Smogon's Showdown's Lobby is not allowed.
-exports.rooms = ['example room name', 'another example'];
+exports.rooms = ['The Breakfast League', 'Aces Room'];
 
 // Any private rooms that should be joined.
 // Private rooms will be moderated differently (since /warn doesn't work in them).
@@ -37,7 +37,7 @@ exports.commandcharacter = '.';
 
 // The default rank is the minimum rank that can use a command in a room when
 // no rank is specified in settings.json
-exports.defaultrank = '%';
+exports.defaultrank = '@';
 
 // Whether this file should be watched for changes or not.
 // If you change this option, the server has to be restarted in order for it to
@@ -74,7 +74,7 @@ exports.botguide = '';
 // exercise moderator discretion. In addition, it currently uses a very simple method of 
 // determining who to mute and so may miss people who should be muted, or mute those who 
 // shouldn't. Use with caution.
-exports.allowmute = false;
+exports.allowmute = true;
 
 // The punishment values system allows you to customise how you want the bot to deal with
 // rulebreakers. Spamming has a points value of 2, all caps has a points value of 1, etc.
