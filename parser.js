@@ -338,7 +338,7 @@ exports.parse = {
 			if ((useDefault || !modSettings.flooding) && isFlooding) {
 				if (pointVal < 2) {
 					pointVal = 2;
-					muteMessage = ', Automated response: flooding';
+					muteMessage = ', Flooding is not cool bro';
 				}
 			}
 			// moderation for caps (over x% of the letters in a line of y characters are capital)
@@ -346,7 +346,7 @@ exports.parse = {
 			if ((useDefault || !modSettings.caps) && capsMatch && toId(msg).length > MIN_CAPS_LENGTH && (capsMatch.length >= ~~(toId(msg).length * MIN_CAPS_PROPORTION))) {
 				if (pointVal < 1) {
 					pointVal = 1;
-					muteMessage = ', Automated response: caps';
+					muteMessage = ', Ur Caps r too epic';
 				}
 			}
 			// moderation for stretching (over x consecutive characters in the message are the same)
@@ -354,7 +354,7 @@ exports.parse = {
 			if ((useDefault || !modSettings.stretching) && stretchMatch) {
 				if (pointVal < 1) {
 					pointVal = 1;
-					muteMessage = ', Automated response: stretching';
+					muteMessage = ', No Flexing C:';
 				}
 			}
 
@@ -373,7 +373,7 @@ exports.parse = {
 				// if the bot has % and not @, it will default to hourmuting as its highest level of punishment instead of roombanning
 				if (roomData.points >= 4 && !this.hasRank(this.ranks[room] || ' ', '@&#~')) cmd = 'hourmute';
 				if (userData.zeroTol > 4) { // if zero tolerance users break a rule they get an instant roomban or hourmute
-					muteMessage = ', Automated response: zero tolerance user';
+					muteMessage = ', U Dont Listen :I;
 					cmd = this.hasRank(this.ranks[room] || ' ', '@&#~') ? 'roomban' : 'hourmute';
 				}
 				if (roomData.points > 1) userData.zeroTol++; // getting muted or higher increases your zero tolerance level (warns do not)
